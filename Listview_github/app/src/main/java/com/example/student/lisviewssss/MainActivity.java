@@ -1,5 +1,7 @@
 package com.example.student.lisviewssss;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -54,5 +56,29 @@ public class MainActivity extends AppCompatActivity {
         arrds.set(vitri,edtten.getText().toString());
         Toast.makeText(MainActivity.this,"sua thanh cong",Toast.LENGTH_LONG).show();
         addds.notifyDataSetChanged();
+    }
+
+    public void xlxoa(View view) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+        alertDialogBuilder.setMessage("Bán có muốn xoa ko ??");
+        alertDialogBuilder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                arrds.remove(vitri);
+                edtten.setText("");
+
+
+                addds.notifyDataSetChanged();
+
+            }
+        });
+        alertDialogBuilder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        alertDialogBuilder.show();
     }
 }

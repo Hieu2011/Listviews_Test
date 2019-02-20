@@ -33,6 +33,7 @@
         <Button
             android:id="@+id/btn_xoa"
             android:layout_width="100dp"
+            android:onClick="xlxoa"
             android:layout_height="wrap_content"
             android:text="Xóa" />
 
