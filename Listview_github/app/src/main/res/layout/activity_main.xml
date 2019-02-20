@@ -28,7 +28,8 @@
             android:id="@+id/btn_sua"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Sửa" />
+            android:text="Sửa"
+            android:onClick="xlsua"/>
         <Button
             android:id="@+id/btn_xoa"
             android:layout_width="100dp"
